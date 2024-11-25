@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --background: #ffffff;
@@ -18,4 +21,47 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes grow-shrink {
+  0% {
+    transform: scale(1); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.05); /* Crece al 105% */
+  }
+  100% {
+    transform: scale(1); /* Vuelve al tamaño original */
+  }
+}
+
+.wine-img {
+  filter: drop-shadow(-5px 0 5px rgba(128, 0, 0, 0.8)) drop-shadow(5px 0 5px rgba(253, 230, 138, 0.8));
+  animation: grow-shrink 3s ease-in-out infinite; /* Aplica la animación de forma continua */
+}
+
+
+.font-cookie {
+  font-family:'Cookie', cursive;
+}
+
+.custom-shape-divider-top-1732315821 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1732315821 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 104px;
+}
+
+.custom-shape-divider-top-1732315821 .shape-fill {
+  fill: #FDE68A;
 }
